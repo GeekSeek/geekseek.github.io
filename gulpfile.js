@@ -16,20 +16,20 @@ gulp.task('styles', () => {
     .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
     .pipe(concat('style.css'))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('./public/styles/'))
+    .pipe(gulp.dest('./styles/'))
     .pipe(reload({stream: true}));
 	});
 
 gulp.task('browser-sync', () => {
   browserSync.init({
-    server: './public'  
+    server: './'  
   })
 });
 
 gulp.task('watch', () => {
 	gulp.watch('./dev/styles/**/*.scss', ['styles']);
 	gulp.watch('./dev/scripts/*.js', ['scripts']);
-	gulp.watch('./public/*.html', reload);
+	gulp.watch('./*.html', reload);
 	});
 
 gulp.task('scripts', () => {
@@ -39,7 +39,7 @@ gulp.task('scripts', () => {
 	      presets: ['es2015']
 	    }))
 	    .pipe(sourcemaps.write('.'))
-	    .pipe(gulp.dest('./public/scripts'))
+	    .pipe(gulp.dest('./scripts'))
 	    .pipe(reload({stream: true}));
 	});
 
