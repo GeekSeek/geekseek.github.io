@@ -378,10 +378,14 @@ $('button.play').on('click', function(e) {
   $('button.pause').fadeIn();
 });
 
+<<<<<<< HEAD
 $(document).ready(function() {
   $(this).ajaxError(function(){
     $('.errorMessage').fadeIn(2000);
   });
+=======
+$(document).ready(function(){
+>>>>>>> 83c569d898cfd007da4f3e34aa6f5455cf2ebb70
   geek.getInput();
   $('.logo-container').on('click', function() {
     window.location.reload(true);

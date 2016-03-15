@@ -161,6 +161,7 @@ ul {
 input {
   border-radius: 0; }
 
+<<<<<<< HEAD
 .errorMessage {
   display: none;
   position: absolute;
@@ -172,6 +173,8 @@ input {
   .errorMessage > * {
     color: #fefdfd; }
 
+=======
+>>>>>>> 83c569d898cfd007da4f3e34aa6f5455cf2ebb70
 header {
   color: #fefdfd;
   font-weight: 300;
